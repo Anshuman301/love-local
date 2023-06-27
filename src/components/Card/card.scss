@@ -4,7 +4,7 @@
 .card {
     box-shadow: map-get($map: colors.$box-shadow, $key: card);
     background-color: map-get($map: colors.$palette, $key: primary);
-    padding: pxToRem(20);
+    padding: pxToVh(20) pxToVw(20);
     border: 1px solid #E2E8F0;
     position: relative;
 }

@@ -1,6 +1,44 @@
 @use "styles/foundation/colors";
 @use "styles/utils" as *;
 @use "sass:map";
+%span-common-css {
+  margin-left: pxToVw(30);
+  color: white;
+  font-size: pxToVh(14);
+  line-height: pxToVh(22);
+  border-radius: pxToRem(11);
+  padding: pxToVh(2.5) pxToVw(5);
+  }
+  %content-css {
+    & > p {
+      text-transform: uppercase;
+      color: map-get($map: colors.$font, $key: caption);
+      font-size: pxToVh(12);
+      line-height: pxToVh(20);
+      font-weight: bold;
+    }
+    & > div {
+      @extend %flex-row;
+      align-items: center;
+
+      .span-text-1 {
+        font-size: pxToVh(30);
+        line-height: pxToVh(40);
+        letter-spacing: pxToRem(-0.417);
+      }
+      .span-text-2 {
+        
+        &-neg {
+          @extend %span-common-css;
+          background: #F59E0B;
+        }
+        &-pos {
+          @extend %span-common-css;
+          background: #10B981;
+        }
+      }
+    }
+  }
 .app {
   &__section-1{
     background-color: map-get($map: colors.$palette, $key: dark);
@@ -70,8 +108,11 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: pxToVw(24);
+     .content {
+      @extend %content-css;
+     }
       &__card-content-container {
-       height: pxToVh(64); 
+       height: pxToVh(88); 
        width: calc(100% - 30px);
        position: absolute;
        left: 15px;
@@ -84,8 +125,16 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: pxToVw(24);
+      &__div-1 {
+        @extend %flex-row;
+        justify-content: space-between;
+        margin-top: pxToVh(12);
+        .content {
+          @extend %content-css;
+        }
+      }
       &__card-content-container {
-        height: pxToVh(220); 
+        height: pxToVh(276); 
         width: calc(100% - 10px);
         left: -5px;
         bottom: 0;
