@@ -27,8 +27,7 @@
           font-size: pxToRem(14);
           padding: 0 pxToRem(12);
           height: pxToRem(40);
-          display: flex;
-          flex-direction: row;
+          @extend %flex-row;
           align-items: center;
           line-height: pxToRem(22);
           & > img {
@@ -36,6 +35,9 @@
           }
           & > span {
             margin-left: pxToVw(12);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
         .select-li {
