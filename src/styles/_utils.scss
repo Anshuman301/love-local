@@ -1,0 +1,23 @@
+@use "sass:math";
+@function pxToRem($px){
+    $remValue: math.div($px * 100, 1570);
+    @return $remValue * 1rem
+};
+
+@function pxToVw($px) {
+    @return math.div(100 * $px, 1520) * 1vw
+};
+
+@function pxToVh($px) {
+    @return math.div(100 * $px, 1080) * 1vh
+}
+%flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+};
+%flex-col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}

@@ -1,0 +1,47 @@
+@use "../../styles/utils" as *;
+@use "../../styles/foundation/colors";
+@use "sass:map";
+%right-shift {
+    right: pxToRem(32);
+    position: relative;
+}
+.header {
+    &__div-1 {
+        @extend %flex-row;
+        @extend %right-shift;
+        & > div {
+            height: pxToVh(32);
+            margin: 0 pxToRem(8);
+            width: pxToVh(32);
+            border-radius: 50%;
+            background-color: map-get($map: colors.$palette, $key: secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & > img {
+                height: pxToVh(16);
+                width: pxToVh(16);
+            }
+        }
+    }
+    hr {
+       height: pxToRem(24);
+       border: 1px solid #E2E8F0;
+       margin-right: pxToRem(20); 
+       @extend %right-shift;
+    }
+    &__div-2 {
+        @extend %flex-row;
+        @extend %right-shift;
+        align-items: center;
+        & > p {
+            color: map-get($map: colors.$font, $key: caption);
+            font-size: pxToRem(14);
+            line-height: pxToVh(22);
+        }
+        &> img {
+            height: pxToVh(6.8);
+            width: pxToVw(10.8)
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@use "styles/foundation/colors";
+@use "styles/utils" as *;
+@use "sass:map";
+.app {
+  &__section-1{
+    background-color: map-get($map: colors.$palette, $key: dark);
+    width: pxToVw(240);
+    padding: pxToRem(16);
+    & > img {
+      margin-left: pxToRem(8);
+    }
+    &__div {
+      margin-top: pxToVh(36);
+      & > p{
+        color: map-get($map: colors.$font, $key: caption);
+        font-size: pxToRem(12);
+        line-height: pxToRem(20);
+        margin-left: pxToRem(8);
+      }
+      & > ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        margin-top: pxToRem(12);
+        &> li {
+          color: map-get($map: colors.$font, $key: secondary);
+          font-size: pxToRem(14);
+          padding: 0 pxToRem(12);
+          height: pxToRem(40);
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          line-height: pxToRem(22);
+          & > img {
+            height: pxToVh(24);
+          }
+          & > span {
+            margin-left: pxToVw(12);
+          }
+          & .select-li {
+            border-radius: 2px;
+            background-color: #0F172A;
+          }
+        }
+      }
+    }
+  }
+  &__section-2 {
+    width: 100%;
+    &>section {
+      background-color: map-get($map: colors.$palette, $key: secondary);
+      height: 100vh - pxToVh(65);
+      padding: pxToVh(32) pxToVw(32);
+      padding-bottom: pxToVh(64);
+      box-sizing: border-box;
+    }
+    &__div-1 {
+      @extend %flex-row;
+      justify-content: space-between;
+      margin-top: pxToVh(34);
+      & > div > img {
+        height: pxToVh(36);
+      }
+    }
+    &__card-container {
+      margin-top: pxToVh(32);
+      height: pxToVh(289);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: pxToRem(24);
+      &__card-content-container {
+       height: pxToVh(64); 
+       width: calc(100% - 30px);
+       position: absolute;
+       left: 15px;
+       bottom: 15px;
+      }
+    }
+    &__card-container-2 {
+      margin-top: pxToVh(24);
+      height: pxToVh(371);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: pxToRem(24);
+      &__card-content-container {
+        height: pxToVh(220); 
+        width: calc(100% - 10px);
+        left: -5px;
+        bottom: 0;
+        position: absolute;
+       }
+    }
+  }
+}

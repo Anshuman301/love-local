@@ -1,0 +1,30 @@
+@use "styles/foundation/colors" as c;
+@use "styles/utils" as *;
+@use "sass:map";
+@use "sass:string";
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: calc(1vw + 1vh + .5vmin);
+    height: 100vh;
+    overflow: hidden;
+    color: map-get($map: c.$font, $key: primary);
+  }
+header {
+  height: pxToVh(65);
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: pxToRem(16) pxToVh(32);
+  align-items: center;
+}
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}

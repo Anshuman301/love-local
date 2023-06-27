@@ -1,0 +1,35 @@
+@use "../../styles/utils" as *;
+@use "../../styles/foundation/colors";
+@use "sass:map";
+.card {
+    box-shadow: map-get($map: colors.$box-shadow, $key: card);
+    background-color: map-get($map: colors.$palette, $key: primary);
+    padding: pxToRem(20);
+    border: 1px solid #E2E8F0;
+    position: relative;
+}
+.card-header {
+    @extend %flex-col;
+    & > span {
+       font-size: pxToRem(16);
+       line-height: pxToRem(24);
+       font-weight: bold 
+    }
+    & > div {
+        @extend %flex-row;
+        justify-content: space-between;
+         & > img {
+            height: pxToVh(32);
+         }
+         & > p {
+            color: #94A3B8;
+            position: relative;
+            bottom: pxToRem(10)
+         }
+        & > span {
+            font-size: pxToRem(20);
+            line-height: pxToRem(30);
+            letter-spacing: pxToRem(-0.25);
+        }
+    }
+}
