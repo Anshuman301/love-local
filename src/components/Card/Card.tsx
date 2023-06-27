@@ -284,10 +284,9 @@ export function CardContent({ data, type, mode }: CardContent) {
             iconSize={0}
             wrapperStyle={{
               position: "absolute",
-              left: "25px",
+              left: "1.64vw",
               top: "-2.7vh",
-              fontSize: "2.77vh",
-              // listStyle: 'none'
+              fontSize: "2.7vh",
             }}
           />
           <Bar dataKey="pv" fill="#38BDF8" />

@@ -8,39 +8,38 @@
   line-height: pxToVh(22);
   border-radius: pxToRem(11);
   padding: pxToVh(2.5) pxToVw(5);
+}
+%content-css {
+  & > p {
+    text-transform: uppercase;
+    color: map-get($map: colors.$font, $key: caption);
+    font-size: pxToVh(12);
+    line-height: pxToVh(20);
+    font-weight: bold;
   }
-  %content-css {
-    & > p {
-      text-transform: uppercase;
-      color: map-get($map: colors.$font, $key: caption);
-      font-size: pxToVh(12);
-      line-height: pxToVh(20);
-      font-weight: bold;
-    }
-    & > div {
-      @extend %flex-row;
-      align-items: center;
+  & > div {
+    @extend %flex-row;
+    align-items: center;
 
-      .span-text-1 {
-        font-size: pxToVh(30);
-        line-height: pxToVh(40);
-        letter-spacing: pxToRem(-0.417);
+    .span-text-1 {
+      font-size: pxToVh(30);
+      line-height: pxToVh(40);
+      letter-spacing: pxToRem(-0.417);
+    }
+    .span-text-2 {
+      &-neg {
+        @extend %span-common-css;
+        background: #f59e0b;
       }
-      .span-text-2 {
-        
-        &-neg {
-          @extend %span-common-css;
-          background: #F59E0B;
-        }
-        &-pos {
-          @extend %span-common-css;
-          background: #10B981;
-        }
+      &-pos {
+        @extend %span-common-css;
+        background: #10b981;
       }
     }
   }
+}
 .app {
-  &__section-1{
+  &__section-1 {
     background-color: map-get($map: colors.$palette, $key: dark);
     width: pxToVw(240);
     padding: pxToRem(16);
@@ -49,7 +48,7 @@
     }
     &__div {
       margin-top: pxToVh(36);
-      & > p{
+      & > p {
         color: map-get($map: colors.$font, $key: caption);
         font-size: pxToRem(12);
         line-height: pxToRem(20);
@@ -60,7 +59,7 @@
         padding: 0;
         list-style-type: none;
         margin-top: pxToRem(12);
-        &> li {
+        & > li {
           color: map-get($map: colors.$font, $key: secondary);
           font-size: pxToRem(14);
           padding: 0 pxToRem(12);
@@ -80,14 +79,14 @@
         }
         .select-li {
           border-radius: 2px;
-          background-color: #0F172A;
+          background-color: #0f172a;
         }
       }
     }
   }
   &__section-2 {
     width: 100%;
-    &>section {
+    & > section {
       background-color: map-get($map: colors.$palette, $key: secondary);
       height: 100vh - pxToVh(65);
       padding: pxToVh(32) pxToVw(32);
@@ -108,15 +107,15 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: pxToVw(24);
-     .content {
-      @extend %content-css;
-     }
+      .content {
+        @extend %content-css;
+      }
       &__card-content-container {
-       height: pxToVh(88); 
-       width: calc(100% - 30px);
-       position: absolute;
-       left: 15px;
-       bottom: 15px;
+        height: pxToVh(88);
+        width: calc(100% - pxToVw(15 * 2));
+        position: absolute;
+        left: pxToVw(15);
+        bottom: pxToVh(15);
       }
     }
     &__card-container-2 {
@@ -134,12 +133,12 @@
         }
       }
       &__card-content-container {
-        height: pxToVh(276); 
-        width: calc(100% - 10px);
-        left: -5px;
+        height: pxToVh(276);
+        width: calc(100% - pxToVw(10));
+        left: pxToVw(-5);
         bottom: 0;
         position: absolute;
-       }
+      }
     }
   }
 }
