@@ -63,11 +63,11 @@ export function CardContent({data, type, mode}: CardContent) {
             <>
             <YAxis dataKey={'amt'} axisLine={false} tickLine={false} tick={{
         fill: "#94A3B8",
-        fontSize: '12px'
+        fontSize: '1.1vh'
       }} domain={[0, 'dataMax + 1000']} type="number"/>
             <XAxis dataKey={"name"} axisLine={false} tickLine={false} tick={{
         fill: "#94A3B8",
-        fontSize: '12px'
+        fontSize: '1.1vh'
       }}/>
             </>
         )
@@ -97,11 +97,11 @@ export function CardContent({data, type, mode}: CardContent) {
       <CartesianGrid vertical={false} stroke={"#F1F5F9"} />
       <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{
         fill: "#94A3B8",
-        fontSize: '12px'
+        fontSize: '1.1vh'
       }} />
       <YAxis axisLine={false} tickLine={false} tick={{
         fill: "#94A3B8",
-        fontSize: '12px'
+        fontSize: '1.1vh'
       }} domain={[0, 'dataMax + 1000']}/>
       <Bar dataKey="pv" fill="#38BDF8" />
       <Bar dataKey="uv" fill="#6366F1" />

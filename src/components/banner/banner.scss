@@ -9,13 +9,13 @@
         margin-left: pxToRem(24);
         padding-top: pxToVh(24);
         .heading {
-            font-size: pxToRem(30);
+            font-size: pxToVh(30);
             line-height: pxToVh(40);
             letter-spacing: pxToRem(-0.25);
         }
         .subtitle {
             color: map-get($map: colors.$font, $key: caption);
-            font-size: pxToRem(16);
+            font-size: pxToVh(16);
             line-height: pxToVh(24);
             letter-spacing: pxToRem(-0.25);
         }

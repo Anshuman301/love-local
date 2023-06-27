@@ -37,10 +37,10 @@
           & > span {
             margin-left: pxToVw(12);
           }
-          & .select-li {
-            border-radius: 2px;
-            background-color: #0F172A;
-          }
+        }
+        .select-li {
+          border-radius: 2px;
+          background-color: #0F172A;
         }
       }
     }

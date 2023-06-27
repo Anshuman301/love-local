@@ -66,7 +66,7 @@ function App() {
           Pages
         </p>
         <ul>
-          <li>
+          <li className='select-li'>
             <Img src={menu_1}/><span>Dashboard</span></li>
           <li>
             <Img src={menu_2} /> <span>Customer</span></li>

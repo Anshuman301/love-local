@@ -11,8 +11,8 @@
 .card-header {
     @extend %flex-col;
     & > span {
-       font-size: pxToRem(16);
-       line-height: pxToRem(24);
+       font-size: pxToVh(16);
+       line-height: pxToVh(24);
        font-weight: bold 
     }
     & > div {
@@ -27,8 +27,8 @@
             bottom: pxToRem(10)
          }
         & > span {
-            font-size: pxToRem(20);
-            line-height: pxToRem(30);
+            font-size: pxToVh(20);
+            line-height: pxToVh(30);
             letter-spacing: pxToRem(-0.25);
         }
     }
