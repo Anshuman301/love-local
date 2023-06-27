@@ -69,7 +69,7 @@
       height: pxToVh(289);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: pxToRem(24);
+      column-gap: pxToVw(24);
       &__card-content-container {
        height: pxToVh(64); 
        width: calc(100% - 30px);
@@ -83,7 +83,7 @@
       height: pxToVh(371);
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: pxToRem(24);
+      column-gap: pxToVw(24);
       &__card-content-container {
         height: pxToVh(220); 
         width: calc(100% - 10px);
